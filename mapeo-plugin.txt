@@ -1,0 +1,81 @@
+$(function(){
+            // Activ'Map plugin init
+            // All options here: http://activmap.pandao.eu/doc/#options
+            $('#activmap-wrapper').activmap({
+                places: [
+                    {title: 'Crowne Plaza',         address: '',            url: '', tags: ['tourism_01'],                               lat: 51.512279, lng: -0.104649, img: 'images/thumb.png', icon: 'images/icons/marker-hotel.png'},
+                    {title: 'The Cavendish London', address: '', phone: '', url: '', tags: ['tourism_01'],                               lat: 51.507632, lng: -0.137779, img: 'images/thumb.png', icon: 'images/icons/marker-hotel.png'},
+                    {title: 'Hilton London Tower ', address: '', phone: '', url: '', tags: ['tourism_01'],                               lat: 51.504580, lng: -0.082737, img: 'images/thumb.png', icon: 'images/icons/marker-hotel.png'},
+                    {title: 'Hertz Rent-A-Car',     address: '', phone: '', url: '', tags: ['shops_04'],                                 lat: 51.514633, lng: -0.162566, img: 'images/thumb.png', icon: 'images/icons/marker-car.png'},
+                    {title: 'Radiant Hair and Bea', address: '', phone: '', url: '', tags: ['shops_01'],                                 lat: 51.498222, lng: -0.062331, img: 'images/thumb.png', icon: 'images/icons/marker-eye.png'},
+                    {title: 'Harrods',              address: '', phone: '', url: '', tags: ['shops_01','shops_02'],                      lat: 51.499418, lng: -0.163239, img: 'images/thumb.png', icon: 'images/icons/marker-diam.png'},
+                    {title: 'House of Fraser',      address: '', phone: '', url: '', tags: ['shops_02'],                                 lat: 51.514886, lng: -0.146204, img: 'images/thumb.png', icon: 'images/icons/marker-diam.png'},
+                    {title: 'Holland & Barrett',    address: '', phone: '', url: '', tags: ['shops_03'],                                 lat: 51.499875, lng: -0.164063, img: 'images/thumb.png', icon: 'images/icons/marker-food.png'},
+                    {title: 'Whole Foods Market',   address: '', phone: '', url: '', tags: ['shops_03'],                                 lat: 51.510434, lng: -0.136833, img: 'images/thumb.png', icon: 'images/icons/marker-food.png'},
+                    {title: 'Greensmiths',          address: '', phone: '', url: '', tags: ['shops_03'],                                 lat: 51.500827, lng: -0.112327, img: 'images/thumb.png', icon: 'images/icons/marker-food.png'},
+                    {title: 'Emirates Stadium',     address: '', phone: '', url: '', tags: ['services_06'],                              lat: 51.554888, lng: -0.108419, img: 'images/thumb.png', icon: 'images/icons/marker-ball.png'},
+                    {title: 'Wembley Stadium',      address: '', phone: '', url: '', tags: ['services_06'],                              lat: 51.555973, lng: -0.279502, img: 'images/thumb.png', icon: 'images/icons/marker-ball.png'},
+                    {title: 'Saint Mary\'s Hospit', address: '', phone: '', url: '', tags: ['services_02'],                              lat: 51.517158, lng: -0.173877, img: 'images/thumb.png', icon: 'images/icons/marker-health.png'},
+                    {title: 'The Wellington Hospi', address: '', phone: '', url: '', tags: ['services_02'],                              lat: 51.531531, lng: -0.171516, img: 'images/thumb.png', icon: 'images/icons/marker-health.png'},
+                    {title: 'Westminster School',   address: '', phone: '', url: '', tags: ['services_05'],                              lat: 51.498170, lng: -0.127978, img: 'images/thumb.png', icon: 'images/icons/marker-grad.png'},
+                    {title: 'The City Of London c', address: '', phone: '', url: '', tags: ['services_05'],                              lat: 51.511740, lng: -0.098659, img: 'images/thumb.png', icon: 'images/icons/marker-grad.png'},
+                    {title: 'London Fire & Emerge', address: '', phone: '', url: '', tags: ['services_04'],                              lat: 51.503546, lng: -0.098593, img: 'images/thumb.png', icon: 'images/icons/marker-ext.png'},
+                    {title: 'Southwark Fire Stati', address: '', phone: '', url: '', tags: ['services_04'],                              lat: 51.502047, lng: -0.09798,  img: 'images/thumb.png', icon: 'images/icons/marker-ext.png'},
+                    {title: 'Soho Fire Station',    address: '', phone: '', url: '', tags: ['services_04'],                              lat: 51.512469, lng: -0.130089, img: 'images/thumb.png', icon: 'images/icons/marker-ext.png'},
+                    {title: 'Scotland Yard',        address: '', phone: '', url: '', tags: ['services_04'],                              lat: 51.498511, lng: -0.133091, img: 'images/thumb.png', icon: 'images/icons/marker-star.png'},
+                    {title: 'Big Ben',              address: '', phone: '', url: '', tags: ['tourism_02'], 		                         lat: 51.500729, lng: -0.124625, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Saint Paul\'s Cathed', address: '', phone: '', url: '', tags: ['services_03','tourism_02','tourism_02_01'], lat: 51.513845, lng: -0.098351, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Westminster Abbey',    address: '', phone: '', url: '', tags: ['services_03','tourism_02','tourism_02_01'], lat: 51.499292, lng: -0.12731,  img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Tower Bridge',         address: '', phone: '', url: '', tags: ['tourism_02','tourism_02_02'],               lat: 51.505456, lng: -0.075356, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Palace of Westminste', address: '', phone: '', url: '', tags: ['tourism_02','tourism_03','tourism_02_03'],  lat: 51.499479, lng: -0.124809, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'National Gallery',     address: '', phone: '', url: '', tags: ['services_01','tourism_03'],                 lat: 51.508916, lng: -0.128294, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'The British Museum',   address: '', phone: '', url: '', tags: ['services_01','tourism_03'],                 lat: 51.519400, lng: -0.126984, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'}
+                
+					title 	 text 	    title of the place / lugar
+					address  text 	    address of the place / direccion 	
+					phone 	 text 	    phone of the place / telefono	
+					tags 	 array 	    list of filters the place belongs to ['shops_01','shops_02'] - etiquetas
+					lat 	 numeric    latitude of the marker 	51.499418
+					lng 	 numeric    longitude of the marker  -0.163239
+					url 	 text 	    URL of a website
+					img 	 text 	    image path (logo, sign...) 	path/image.jpg
+					icon 	 text 	    marker icon path 	path/icon.png
+					custom 	 text 	    your own custom content (html) 	
+				
+				],
+                icon: 'jquery-activmap/img/marker.png',
+                lat: 51.5286416,       //latitude of the center
+                lng: -0.1015987,       //longitude of the center
+                posPanel: 'left',
+                showPanel: true,
+                radius: 0,
+                cluster: true,
+                country: 'uk',
+                mapType: 'roadmap',
+                request: 'large',
+                locationTypes: ['geocode','establishment']
+            }); 
+        });
+    </script>
+    			places 	        array o url del .json   	            list of place objects {title, address, phone, tags, lat, lng, img} 	
+				lat 	        numeric 	                            latitude of the center 	51.499418
+				lng 	        numeric 	                            longitude of the center 	51.499418
+				zoom 	        integer [0-21] 	                        default zoom level on load 	
+				autogeolocate 	true or false 	                        enables / disables the auto geolocation on load to set the center of the map 	
+				cluster 	    true or false 	                        enables / disables clustering for large amounts of markers 	
+				mapType 	    "roadmap", "satellite", "perspective" 	as the name suggests 	
+				posPanel 	    "left" or "right" 	                    position of the removable panel 	
+				showPanel 	    true or false 	                        shows / hides the removable panel 	
+				radius 	        integer 	                            max radius around the position in kilometers 	20 for 20km
+				country 	    text (2 characters - ISO 3166-1) 	    to limit to 1 country (optional) 	"ca": Canada, "us": United States, "fr": France
+				styles 	        object 	map styles 	                    snazzy maps styles
+				request 	    "strict" or "large" 	                type of request on click - strict: display of the places which respect all the checked 
+																		tags large: display of the places which respect one of the checked tags
+				locationTypes 	array Supported types: geocode,         types of locations returned by autocomplete requests 	e.g. ['geocode','establishment']
+								address, establishment, (regions), 
+								locality, sublocality, postal_code, 
+								country, administrative_area_level_1, 
+								administrative_area_level_2, (cities), 
+								administrative_area_level_3 	
+				show_center 	true or false 	                        shows / hides the marker of the center of the map
+-->

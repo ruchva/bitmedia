@@ -1,0 +1,118 @@
+DOCUMENTACION TECNICA
+
+# creamos proyecto laravel con jetstream donde seleccionaremos con que framework
+# trabajaremos con para la presentacion 
+
+laravel new bitmedia --jet
+
+(0) livewire  -> tailwind
+(1) inertia   -> vuejs
+
+# si por algun motivo no se instala algun componente en la carpeta vendor
+
+composer install
+
+# creamos los modelos categoria, cliente y comercial com migracion y factory
+
+php artisan make:model Category -mf
+php artisan make:model Client -mf
+php artisan make:model Commercial -mf
+
+# revidamos la logica implementada
+# una vez concluida la configuracion de los datos de prueba
+
+php artisan migrate
+
+# si hacemos mas cambios y queremos refrescar la migracion 
+
+php artisan migrate:fresh --seed
+
+# nos fijamos el archivo .env el APP_KEY si tiene una clave encriptada la dejamos
+# si no tiene la creamos con 
+
+php artisan key:generate
+
+# si queremos reinstalar jetstream
+
+composer require laravel/jetstream
+
+# verificamos la presencia de jetstream
+
+php artisan
+
+# podemos instalar de nuevo y con la tecnologia seleccionada
+
+php artisan jetstream:install livewire
+
+# para compilar los componentes instalados 
+
+nvm install 
+nvm run dev
+
+# creamos la plantilla principal del sistema en resources/views/layouts/web.blade.php
+
+# creamos en resources/views/index.blade.php y eliminamos welcome.blade.php
+# index sera la vista y web sera la plantilla
+# configuramos esto en las rutas 
+# revisamos lo que hay en package.json y webpack.mix.js 
+# revisamos el codigo html implementado con tailwind 
+
+# creamos un componente livewire para reducir la cantidad de codigo php
+
+php artisan make:livewire ClientList
+
+# revisar el codigo de la view lista de clientes clien-list.blade.php
+# creamos un controlador para las paginas individuales de clientes
+
+php artisan make:controller PageController
+
+# adicionar PageController a la clase donde estan las rutas web.php
+# verificar el codigo de web.php
+# revisar codigo de Client.php y client.blade.php
+# creamos un componente blade para las tarjetas de clientes
+
+php artisan make:component client-card
+
+# se crea una carpeta components en resources/views 
+# es posible editar y por ende personalizar los componentes jetstream
+
+php artisan vendor:publish
+
+# seleccionamos jetstream-views 
+# se crea una carpeta vendor dentro de resources/views con todos los templates 
+# podemos ver la configuracion de jetstream en config/jetstream.php  
+# si por ejemplo descomentamos la linea  Features::profilePhotos(), 
+# permitira adicionar fotos al perfil de usuario
+
+# si modificamos tailwind.config.js  
+# para ver y utilizar estas configuraciones se debe compilar
+
+npm run watch
+
+npm run build
+
+# al terminar el proyecto o para ambientes productivos podemos purgar nuestro  
+# archivo app.css y cualquier otro de los fragmentos de codigo que no usemos 
+# usando la libreria
+
+https://purgecss.com/
+
+# y finalmente podemos minimizar nuestra hoja de estilo con la libreria
+
+https://cssnano.co/
+
+# agregamos un asistente para el debug
+
+composer require barryvdh/laravel-debugbar --dev
+
+# convierte paginas con etiquetas bootstrap a tailwind
+# https://laravel-news.com/tailwindo
+
+composer global require awssat/tailwindo
+tailwindo resources/views --extensions=php --recursive=true --replace=true
+
+# tambien se pueden afectar paginas especificas
+
+# se instalo la barrita debugbar 
+
+composer require barryvdh/laravel-debugbar --dev
